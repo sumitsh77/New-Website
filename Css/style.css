@@ -1,0 +1,260 @@
+:root{
+    --primary-color:#D91E0D;
+    --sports-color:#f2cb05;
+    --tech-color:#009cff;
+    --ent-color:#a66bbe;
+}
+h1,h2,h3,h4,h5,h6{font-family: 'Staatliches', cursive;}
+body{
+    font-family: Helvetica, sans-serif;
+    background-color: #efefef;
+}
+/* Utility classes */
+.container{
+    max-width: 1100px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+.current{
+    background: var(--primary-color);
+    padding: 1rem;
+    border-radius: 5px;
+    color: #fff;
+}
+.current:hover{
+    transition: all 0.8s ease-in-out;
+    opacity: 0.6;
+}
+.l-heading{font-size: 3rem;}
+.m-heading{font-size: 2rem;}
+.s-heading{font-size: 1.8rem;}
+a{text-decoration: none; color: black;}
+ul{list-style: none;}
+.sport-card{
+    padding: 0.4rem;
+    font-size: 14px;
+    background:var(--sports-color);
+    color:#fff;
+    border-radius:10px;
+}
+.tech-card{
+    padding: 0.4rem;
+    background:var(--tech-color);
+    color:#fff;
+    font-size: 14px;
+    border-radius:10px;
+}
+.ent-card{
+    padding: 0.4rem;
+    background:var(--ent-color);
+    color:#fff;
+    font-size: 14px;
+    border: radius 10px;
+    
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.btn:hover{opacity: 0.5;}
+.bg-dark{background-color:#444; color: #fff; padding: 1rem;}
+.primary-color{background-color: var(--primary-color); color: #fff; padding: 1rem;}
+.dark-color{background-color: var(#333); color: #fff;}
+.sport-color{background-color: var(--sports-color); color: #fff;}
+#articles .article-card{background-color: #fff;padding: 1rem;}
+
+/* Main section  */
+
+/* Navbar section */
+#navbar{
+    position: sticky;
+    top: 0;
+    background-color: #efefef;
+    padding: 0.3rem;
+    z-index: 5;
+}
+#navbar .navbar-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-content: center;
+}
+#navbar .navbar-container:first-child{grid-column: 1/ span 2;}
+#navbar .navbar-container ul{
+    display: flex;
+}
+#navbar .navbar-container ul li{
+    margin: 0 1rem;
+}
+#navbar .socials {justify-self:end;}
+#navbar .socials i {padding: 0.3rem;
+color:#b7b6b6;}
+#navbar img{ width: 180px;}
+
+/* Hero section */
+#hero-section {
+    position: relative;
+    background-color: #333; 
+    padding: 2rem;
+    color: #fff;
+}
+#hero-section::before{
+    content: "";
+    background: url(/img/featured.jpg)no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+    left: 0;
+    top: 0;
+}
+#hero-section .hero-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+#hero-section .hero-container .hero-content{
+    z-index: 1;
+}
+
+/* Article section */
+#articles .article-main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+}
+#articles .article-main > :first-child,
+#articles .article-main > :last-child{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-content: center;
+}
+#articles .article-main > :first-child{
+    grid-column: 1 /span 2;
+}
+#articles .article-main >:last-child{
+    grid-column: 2/span 2;
+}
+
+#articles img{width: 180px;margin-bottom: 0.5rem;}
+
+/* Footer Section */
+#main-footer{
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0 0.1rem 0; 
+    margin: 0 1rem;
+}
+#main-footer img{width: 150px; margin-top: 0.8rem;}
+#main-footer .footer-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:2rem;
+}
+#main-footer .footer-container > :last-child{grid-column: 1/span 4; text-align: center;background-color:#555; width: 100%;}
+#main-footer .footer-container > :last-child p{padding: 0 5rem;}
+.footer-link {
+    display: inline-block;
+    padding-left: 0px;
+}
+.footer-link a{
+    line-height: 2; 
+    color: #fff;
+    font-size: 15px;
+}
+.footer-link a:hover{color: var(--primary-color);}
+.footer-link li{
+    border-bottom: 0.5px dotted #777;
+}
+#main-footer .footer-container ul{
+       margin-top: 0px;
+       width: 100%;
+    }
+#main-footer form input[type="mail"]{
+    display: inline-block;
+    padding: 0.5rem;
+    width:100%;
+}
+#main-footer form input[type="submit"]{
+    display: inline-block;
+    width: 100%;
+    margin: 0.5rem 0;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem;
+    cursor: pointer;
+}
+#main-footer form input[type="submit"]:hover{opacity: 0.5;}
+
+/* About section of the website */
+#about-section{
+    padding: 1rem 0 0 0;
+    margin: 0 1rem;
+}
+#about-section .about-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap:1rem;
+    text-align: center;
+}
+.about-container h1{font-size: 2.5rem;}
+#about-section .about-container>:first-child{background-color: #fff;
+padding: 2rem;}
+#about-section .about-container>:last-child{
+    grid-template-rows: 1fr;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    height: 200px;
+    width: 200px;
+}
+
+/* article section */
+#article-section .article-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 1rem 0;
+    grid-gap: 1rem;
+}
+#article-section .article-container .category{
+    width: 180px;
+    background-color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+    height: 250px;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+#article-section .article-container .category h3{text-align: center;}
+#article-section .article-container .category li{
+    display: block;
+    line-height: 2;
+    border-bottom: 0.2px dotted #333;
+}
+#article-section .article-container .category ul li a:hover{
+    color: var(--primary-color);
+}
+#article-section .article-container .about-card{
+    width: 165px;
+    background-color: var(--sports-color);
+    padding: 1rem;
+    text-align: center;
+}
+#article-section img{width: 500px;}
+
+.author{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #efefef;
+}
+.content{background-color: #fff;
+padding: 1rem;}
